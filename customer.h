@@ -15,19 +15,19 @@ class Customer
 	
 	public:
 		Customer();
-		Customer(int,string,string,string,string);
+		Customer(int,string,string,string);
 		
 		virtual ~Customer();	
 	
 		virtual void setPrivilege(int) = 0; // pure virtual
-		virtual void print();
+		virtual void print() const;
 		
-		virtual string getType(); // pure virtual
+		virtual string getType() = 0; // pure virtual
 		
 		
 	private:	
 		int num;
-		string name,address,tel,type; 
+		string name,address,tel; 
 		
 	
 };

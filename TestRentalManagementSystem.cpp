@@ -7,15 +7,14 @@ Course COEN 244
 Assignment #3
 */
 #include <iostream>
-using name space std;
+using namespace std;
 
 
 int main()
 {
 	
 	
-	hgdr
-	
+
 	
 	
 	

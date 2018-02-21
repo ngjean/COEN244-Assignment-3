@@ -6,7 +6,7 @@ Date:
 
 #include "car.h"
 
-Car::Car()
+Car::Car() // default constroctor
 {
 	num = 100;
 	type = "UNKNOWN";
