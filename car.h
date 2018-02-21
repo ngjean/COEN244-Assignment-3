@@ -27,6 +27,6 @@ class Car
 	private:
 		int num;
 		string type;
-		bool status;	
+		bool status; // true = "available" & false = "unavailable"
 };
 #endif
