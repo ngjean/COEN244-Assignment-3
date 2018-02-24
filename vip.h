@@ -8,7 +8,7 @@ Date:
 #define _VIP_H_
 
 #include"customer.h"
-#include<iostream>
+
 using namespace std;
 
 class VIP : public Customer
