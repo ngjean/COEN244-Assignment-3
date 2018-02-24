@@ -8,6 +8,7 @@ Date:
 #define _CUSTOMER_H_
 
 #include<iostream>
+#include <string>
 using namespace std;
 
 class Customer
