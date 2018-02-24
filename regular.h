@@ -21,9 +21,11 @@ class Regular : public Customer
 		~Regular();
 		
 		virtual void print()const;
+		virtual void setPrivilege(int);
 		
 	private:
 	string type;
+	int privilege;
 	
 	
 	
