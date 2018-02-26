@@ -9,14 +9,14 @@ Date:
 Car::Car() // default constroctor
 {
 	num = 100;
-	type = "UNKNOWN";
+	//type = "UNKNOWN";
 	status = true;
 }
 
-Car::Car(int inum, string stype)
+Car::Car(int inum)//, string stype)
 {
 	num = inum;
-	type = stype;
+	//type = stype;
 	status = true;
 }
 
