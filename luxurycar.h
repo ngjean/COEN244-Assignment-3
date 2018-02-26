@@ -14,5 +14,6 @@ class Luxurycar : public Car
 	bool getStatus() const;
 
 
+
 };
 #endif
