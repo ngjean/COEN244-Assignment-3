@@ -20,10 +20,12 @@ Car::Car(int inum, string stype)
 	status = true;
 }
 
+/*
 void Car::setStatus(bool bstatus)
 {
 	status = bstatus;
 }
+*/
 
 void Car::print() const
 {
@@ -32,10 +34,12 @@ void Car::print() const
 	
 }
 
+/*
 bool Car::getStatus()
 {
 	return status;
 }
+*/
 
 Car::~Car()
 {
