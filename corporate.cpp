@@ -4,7 +4,7 @@ Program:
 Date:
 */
 
-#include "Corporate.h"
+#include "corporate.h"
 
 Corporate::Corporate() {
 	// TODO Auto-generated constructor stub
