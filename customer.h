@@ -24,7 +24,7 @@ class Customer
 		virtual void print() const;
 		
 		virtual string getType() = 0; // pure virtual
-		
+		virtual int getPrivilege()const = 0;
 		
 	private:	
 		int num;
