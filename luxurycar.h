@@ -1,4 +1,4 @@
-#ifndefine _LUXYRYCAR_H_
+#ifndef _LUXYRYCAR_H_
 #define _LUXYRYCAR_H_
 
 #include "car.h"
