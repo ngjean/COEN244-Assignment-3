@@ -17,7 +17,7 @@ class Regular : public Customer
 		
 		Regular();
 		Regular(int, string, string, string, int);
-		
+		Regular(const Regular&);
 		~Regular();
 		
 		virtual void print()const;
