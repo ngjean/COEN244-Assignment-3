@@ -15,11 +15,14 @@ class Car
 	public:
 		Car();
 		Car(int,string);	
-	
-		void setStatus(bool);
+		Car(const Car&);
 		
+		int getnum();
+		string getype();
+		
+		void setStatus(bool);
 		bool getStatus() const;
-	
+		
 		virtual void print() const;
 		
 		virtual ~Car();
