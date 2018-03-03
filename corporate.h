@@ -14,6 +14,7 @@ class Corporate : public Customer {
 public:
 	Corporate();
 	Corporate(int, string, string, string, string, string, int);
+	Corporate(const Corporate&);
 	void print() const;
 	~Corporate();
 
