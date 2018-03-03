@@ -9,11 +9,13 @@ Date:
 VIP::VIP() : Customer()
 {
 	type = "VIP";	
+	privilege = 45;
 }
 
-VIP::VIP(int inum, string sname, string saddress, string stell) : Customer(inum,sname,saddress,stell)
+VIP::VIP(int inum, string sname, string saddress, string stell,int iprivilege) : Customer(inum,sname,saddress,stell)
 {
 	type = "VIP";
+	privilege = iprivilege;
 }
 
 void VIP::print()const

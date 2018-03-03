@@ -8,12 +8,12 @@
 #ifndef CORPORATE_H_
 #define CORPORATE_H_
 
-#include "customer.h"
+#include "customer.cpp"
 
 class Corporate : public Customer {
 public:
 	Corporate();
-	Corporate(int, string, string, string, string, string);
+	Corporate(int, string, string, string, string, string, int);
 	void print() const;
 	~Corporate();
 
@@ -21,6 +21,7 @@ private:
 	string nameCompany;
 	string addressCompany;
 	string type;
+	int privilege;
 };
 
 #endif /* CORPORATE_H_ */

@@ -19,14 +19,14 @@ class CarRentalManagement
   public:
   
     CarRentalManagement();//default
-    CarRentalManagement();
+    //CarRentalManagement();
 
     ~CarRentalManagement();
 
-    void AddCar();// a)
+    void AddCar(int,string);// a)
     void AddCustomer();// c)
 
-    void RemoveCar();// b)
+    void RemoveCar(inum);// b)
     void RemoveCustomer();// d)
 
     void RentCar();// e)
@@ -44,7 +44,10 @@ class CarRentalManagement
   
   
   private:
-
+	Customer customerPtr;
+	Car carPtr[100];
+	int regularpriv, coporatedpriv, vippriv;
+	int Numcar, NumCustomer;
 
 
 

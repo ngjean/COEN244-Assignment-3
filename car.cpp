@@ -20,10 +20,31 @@ Car::Car(int inum, string stype)
 	status = true;
 }
 
+Car::Car(const Car& anotherCar)
+{
+	num = anotherCar.num;
+	type = anotherCar.type;
+	status = anotherCar.status;
+}
+
+int Car::getnum()
+{
+	return num;
+}
+
+string Car::getype()
+{
+	return type;
+}
 
 void Car::setStatus(bool bstatus)
 {
 	status = bstatus;
+}
+
+bool Car::getStatus() const
+{
+	return status;
 }
 
 
@@ -33,13 +54,6 @@ void Car::print() const
 		<<"Type: "<<type<<endl;
 	
 }
-
-
-bool Car::getStatus() const
-{
-	return status;
-}
-
 
 Car::~Car()
 {
