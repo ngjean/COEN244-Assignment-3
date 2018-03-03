@@ -31,6 +31,11 @@ Customer::Customer(const Customer &c1){
 	
 }
 
+int Customer::getNum(){
+	
+	return num;
+}
+
 void Customer::print()const
 {
 	cout<<"Customer#: "<<num<<endl
