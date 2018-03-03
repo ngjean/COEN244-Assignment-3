@@ -9,23 +9,23 @@ Date:
 Car::Car() // default constroctor
 {
 	num = 100;
-	//type = "UNKNOWN";
+	type = "UNKNOWN";
 	status = true;
 }
 
-Car::Car(int inum)//, string stype)
+Car::Car(int inum, string stype)
 {
 	num = inum;
-	//type = stype;
+	type = stype;
 	status = true;
 }
 
-/*
+
 void Car::setStatus(bool bstatus)
 {
 	status = bstatus;
 }
-*/
+
 
 void Car::print() const
 {
@@ -34,12 +34,12 @@ void Car::print() const
 	
 }
 
-/*
-bool Car::getStatus()
+
+bool Car::getStatus() const
 {
 	return status;
 }
-*/
+
 
 Car::~Car()
 {

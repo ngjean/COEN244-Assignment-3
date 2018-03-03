@@ -14,11 +14,11 @@ class Car
 {
 	public:
 		Car();
-		Car(int);//,string);	
+		Car(int,string);	
 	
-		void setStatus(bool) = 0;
+		void setStatus(bool);
 		
-		bool getStatus() const = 0;
+		bool getStatus() const;
 	
 		virtual void print() const;
 		

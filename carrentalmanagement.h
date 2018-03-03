@@ -1,11 +1,11 @@
 #ifndef _CARRENTALMANAGEMENT_H_
 #define _CARRENTALMANAGEMENT_H_
 
-#include"car.h"
-#include"customer.h"
-#include"corporate.h"
-#include"vip.h"
-#include"regular.h"
+#include"car.cpp"
+#include"customer.cpp"
+#include"corporate.cpp"
+#include"vip.cpp"
+#include"regular.cpp"
 
 //concern about mutiple include of the same class like customer since it is already include in vip,regular,coporate
 

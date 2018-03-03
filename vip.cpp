@@ -5,8 +5,6 @@ Date:
 */
 
 #include"vip.h"
-#include"customer.cpp"
-
 
 VIP::VIP() : Customer()
 {
