@@ -14,13 +14,10 @@ CarRentalManagement::CarRentalManagement()
 	vippriv = 45;
 	Numcar = 0;
 	NumCustomer= 0;
+	LimitCar = 100;
+	LimitCustomer = 100;
+	CustomerPtr = new Customer[LimitCustomer];
 }
-/*
-CarRentalManagement::CarRentalManagement()
-{
-	
-}
-*/
 
 CarRentalManagement::AddCar(int inum, string stype)
 {
@@ -37,10 +34,56 @@ CarRentalManagement::RemoveCar(int iNumcar)
 	Numcar--;
 }
 
+//The AddCustomer Function overloaded for Regular Customers
+void CarRentalManagement::AddCustomer(const Regular &r1){
 
+	if (NumCustomer < LimitCustomer){
+	
+		CustomerPtr[NumCustomer] = r1;
+		NumCustomer++;
+	}
+	else{
+		cout << endl << "Limit of Customers exceeded";
+	}
+}
 
+//The AddCustomer Function overloaded for Corporate Customers
+void CarRentalManagement::AddCustomer(const Corporate &co1){
 
+	if (NumCustomer < LimitCustomer){
+	
+		CustomerPtr[NumCustomer] = co1;
+		NumCustomer++;
+	}
+	else{
+		cout << endl << "Limit of Customers exceeded";
+	}
+}
 
+//The AddCustomer Function overloaded for VIP Customers
+void CarRentalManagement::AddCustomer(const VIP &v1){
 
-    void RemoveCustomer();// d)
+	if (NumCustomer < LimitCustomer){
+	
+		CustomerPtr[NumCustomer] = v1;
+		NumCustomer++;
+	}
+	else{
+		cout << endl << "Limit of Customers exceeded";
+	}
+}
+
+void CarRentalManagement::RemoveCustomer(int numID){
+
+	for (i = 0; i < NumCustomer; i++){
+		if(CustomerPtr[i].getNum == numID){
+			for (j = i; j < NumCustomer -1; j++){
+				CustomerPtr[j] = CustomerPtr[j+1];
+			}
+			NumCustomer--;
+			return;
+		}
+	}
+	cout << endl << "Customer # " << numID << " could not be found." << endl;
+}
 
