@@ -19,7 +19,7 @@ class CarRentalManagement
   public:
   
     CarRentalManagement();//default
-    CarRentalManagement();
+    //CarRentalManagement();
 
     ~CarRentalManagement();
 
@@ -44,6 +44,8 @@ class CarRentalManagement
   
   
   private:
+	Customer CustomerPtr;
+	int regularpriv, coporatedpriv, vippriv;
 
 
 

@@ -7,7 +7,7 @@ Date:
 #ifndef _REGULAR_H_
 #define _REGULAR_H_
 
-#include"customer.h"
+#include"customer.cpp"
 #include<iostream>
 using namespace std;
 

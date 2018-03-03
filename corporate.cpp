@@ -11,14 +11,17 @@ Corporate::Corporate() {
 	type = "Corporate";
 	nameCompany = "No_Name";
 	addressCompany = "000 Main Street";
+	privilege = 35;
 
 }
 
-Corporate::Corporate(int inum, string sname, string saddress, string stell, string nameCo, string addreCo) : Customer(inum,sname,saddress,stell){
+Corporate::Corporate(int inum, string sname, string saddress, string stell, string nameCo, string addreCo, int iprivilege) : Customer(inum,sname,saddress,stell)
+{
 
 	type = "Corporate";
 	nameCompany= nameCo;
 	addressCompany = addreCo;
+	privilege = iprivilege;
 }
 
 void Corporate::print()const{

@@ -7,7 +7,7 @@ Date:
 #ifndef _VIP_H_
 #define _VIP_H_
 
-#include"customer.h"
+#include"customer.cpp"
 
 using namespace std;
 
@@ -16,7 +16,7 @@ class VIP : public Customer
 	public:
 		
 		VIP();
-		VIP(int inum, string sname, string saddress, string stel);
+		VIP(int, string, string, string, int);
 		
 		~VIP();
 		
@@ -24,6 +24,7 @@ class VIP : public Customer
 		
 	private:
 	string type;
+	int privilege;
 	
 	
 	
