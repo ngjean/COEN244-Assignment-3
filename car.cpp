@@ -20,6 +20,13 @@ Car::Car(int inum, string stype)
 	status = true;
 }
 
+Car::Car(const Car& anotherCar)
+{
+	num = anotherCar.num;
+	type = anotherCar.type;
+	status = anotherCar.status;
+}
+
 int Car::getnum()
 {
 	return num;
