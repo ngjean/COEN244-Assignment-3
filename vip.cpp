@@ -18,6 +18,12 @@ VIP::VIP(int inum, string sname, string saddress, string stell,int iprivilege) :
 	privilege = iprivilege;
 }
 
+VIP::VIP(const VIP& v1) : Customer(v1){
+
+	
+
+}
+
 void VIP::print()const
 {
 	Customer::print();
