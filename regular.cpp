@@ -5,7 +5,6 @@ Date:
 */
 
 #include"regular.h"
-#include"customer.cpp"
 
 Regular::Regular() : Customer()
 {
@@ -13,10 +12,10 @@ Regular::Regular() : Customer()
 	privilege = 20;
 }
 
-Regular::Regular(int inum, string sname, string saddress, string stell) : Customer(inum,sname,saddress,stell)
+Regular::Regular(int inum, string sname, string saddress, string stell, int iprivilege) : Customer(inum,sname,saddress,stell)
 {
 	type = "Regular";
-	privilege = 20;
+	privilege = iprivilege;
 }
 
 void Regular::print()const

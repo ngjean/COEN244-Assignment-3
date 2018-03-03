@@ -16,7 +16,7 @@ class Regular : public Customer
 	public:
 		
 		Regular();
-		Regular(int inum, string sname, string saddress, string stel);
+		Regular(int, string, string, string, int);
 		
 		~Regular();
 		
