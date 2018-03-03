@@ -17,7 +17,7 @@ class VIP : public Customer
 		
 		VIP();
 		VIP(int, string, string, string, int);
-		
+		VIP(const VIP&);
 		~VIP();
 		
 		virtual void print()const;
