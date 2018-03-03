@@ -19,13 +19,13 @@ CarRentalManagement::CarRentalManagement()
 	CustomerPtr = new Customer[LimitCustomer];
 }
 
-CarRentalManagement::AddCar(int inum, string stype)
+void CarRentalManagement::AddCar(int inum, string stype)
 {
-	carPtr[Numcar] = new car(inum,stype);
+	carPtr[Numcar] = new Car(inum,stype);
 	Numcar++;
 }
 
-CarRentalManagement::RemoveCar(int iNumcar)
+void CarRentalManagement::RemoveCar(int iNumcar)
 {
 	for(int inum = iNumcar; inum < Numcar; inum++)
 	{
