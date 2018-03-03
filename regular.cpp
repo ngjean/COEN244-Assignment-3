@@ -18,6 +18,11 @@ Regular::Regular(int inum, string sname, string saddress, string stell, int ipri
 	privilege = iprivilege;
 }
 
+Regular::Regular(const Regular& r1):Customer(r1){
+	
+	//here I added a copy constructor to add new Customers to the list depending on what they are
+}
+
 void Regular::print()const
 {
 	Customer::print();
