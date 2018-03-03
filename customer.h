@@ -26,6 +26,8 @@ class Customer
 		
 		virtual string getType() = 0; // pure virtual
 		virtual int getPrivilege()const = 0;
+	
+		int getNum();
 		
 	private:	
 		int num;
