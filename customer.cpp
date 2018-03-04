@@ -16,7 +16,7 @@ Customer::Customer()
 	privilege = 0;
 }
 
-Customer::Customer(int inum, string sname, string saddress, string stel, string stype, int ipriv)
+Customer::Customer(int inum, int ipriv, string sname, string saddress, string stel, string stype)
 {
 	Idnum = inum;
 	name = sname;

@@ -16,18 +16,18 @@ class Customer
 	
 	public:
 		Customer();
-		Customer(int,string,string,string,string,int);
+		Customer(int,int,string,string,string,string);
 		Customer(const Customer&);
 		
 		virtual ~Customer();	
 	
-		virtual void setPrivilege(int); 
+		void setPrivilege(int); 
 		
-		virtual int getID();
-		virtual string getType(); 
-		virtual int getPrivilege();
+		int getID();
+		string getType(); 
+		int getPrivilege();
 		
-			virtual void print() const;
+		virtual void print() const;
 		
 	private:	
 		int Idnum,privilege;

@@ -8,33 +8,20 @@ Date:
 
 Regular::Regular() : Customer()
 {
-	type = "Regular";	
-	privilege = 20;
+	//does nothing
 }
 
-Regular::Regular(int inum, string sname, string saddress, string stell, int iprivilege) : Customer(inum,sname,saddress,stell)
+Regular::Regular(int inum, string sname, string saddress, string stell) : Customer(inum,privilege,sname,saddress,stell,type)
 {
-	type = "Regular";
-	privilege = iprivilege;
+	//does nothing
 }
 
-Regular::Regular(const Regular& r1):Customer(r1){
-	
-	privilege = r1.privilege;
-}
-
-void Regular::print()const
+Regular::Regular(const Regular& r1):Customer(r1)
 {
-	Customer::print();
-	cout<<"Type: "<<type<<endl;
-}
-
-void Regular::setPrivilege(int iprivilege)
-{
-	privilege = iprivilege;
+	//does nothing
 }
 
 Regular::~Regular()
 {
-	
+	//does nothing
 }
