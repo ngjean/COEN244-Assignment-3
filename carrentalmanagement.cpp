@@ -16,7 +16,7 @@ CarRentalManagement::CarRentalManagement()
 	NumCustomer= 0;
 	LimitCar = 100;
 	LimitCustomer = 100;
-	CustomerPtr = new Customer[LimitCustomer];
+	customerPtr = new Customer[LimitCustomer];
 }
 
 void CarRentalManagement::AddCar(int inum, string stype)
@@ -39,7 +39,7 @@ void CarRentalManagement::AddCustomer(const Regular &r1){
 
 	if (NumCustomer < LimitCustomer){
 	
-		CustomerPtr[NumCustomer] = r1;
+		customerPtr[NumCustomer] = r1;
 		NumCustomer++;
 	}
 	else{
@@ -52,7 +52,7 @@ void CarRentalManagement::AddCustomer(const Corporate &co1){
 
 	if (NumCustomer < LimitCustomer){
 	
-		CustomerPtr[NumCustomer] = co1;
+		customerPtr[NumCustomer] = co1;
 		NumCustomer++;
 	}
 	else{
@@ -65,7 +65,7 @@ void CarRentalManagement::AddCustomer(const VIP &v1){
 
 	if (NumCustomer < LimitCustomer){
 	
-		CustomerPtr[NumCustomer] = v1;
+		customerPtr[NumCustomer] = v1;
 		NumCustomer++;
 	}
 	else{
@@ -76,9 +76,9 @@ void CarRentalManagement::AddCustomer(const VIP &v1){
 void CarRentalManagement::RemoveCustomer(int numID){
 
 	for (i = 0; i < NumCustomer; i++){
-		if(CustomerPtr[i].getNum == numID){
+		if(customerPtr[i].getNum == numID){
 			for (j = i; j < NumCustomer -1; j++){
-				CustomerPtr[j] = CustomerPtr[j+1];
+				customerPtr[j] = customerPtr[j+1];
 			}
 			NumCustomer--;
 			return;
