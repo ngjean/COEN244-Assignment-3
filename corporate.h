@@ -21,8 +21,6 @@ public:
 private:
 	string nameCompany;
 	string addressCompany;
-	string type;
-	int privilege;
 };
 
 #endif /* CORPORATE_H_ */
