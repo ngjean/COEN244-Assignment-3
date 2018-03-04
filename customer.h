@@ -17,6 +17,7 @@ class Customer
 	public:
 		Customer();
 		Customer(int,string,string,string);
+		Customer(const Customer&);
 		
 		virtual ~Customer();	
 	
@@ -25,6 +26,8 @@ class Customer
 		
 		virtual string getType() = 0; // pure virtual
 		virtual int getPrivilege()const = 0;
+	
+		int getNum();
 		
 	private:	
 		int num;

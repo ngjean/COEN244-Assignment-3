@@ -24,6 +24,13 @@ Corporate::Corporate(int inum, string sname, string saddress, string stell, stri
 	privilege = iprivilege;
 }
 
+Corporate::Corporate(const Corporate &co1) : Customer(co1){
+	
+	nameCompany = co1.nameCompany;
+	addressCompany = co1.addressCompany;
+	privilege = co1.privilege;
+}
+
 void Corporate::print()const{
 
 	Customer :: print();

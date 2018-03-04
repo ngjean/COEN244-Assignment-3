@@ -24,10 +24,12 @@ class CarRentalManagement
     ~CarRentalManagement();
 
     void AddCar(int,string);// a)
-    void AddCustomer();// c)
-
-    void RemoveCar(inum);// b)
-    void RemoveCustomer();// d)
+    void AddCustomer(const Regular&); // c.1)
+    void AddCustomer(const Corporate&);  //c.2)
+    void AddCustomer(const VIP&);  //c.3)
+	
+    void RemoveCar(int);// b)
+    void RemoveCustomer(int);// d)
 
     void RentCar();// e)
 
@@ -44,10 +46,10 @@ class CarRentalManagement
   
   
   private:
-	Customer customerPtr;
+	Customer *customerPtr;
 	Car carPtr[100];
 	int regularpriv, coporatedpriv, vippriv;
-	int Numcar, NumCustomer;
+	int Numcar, NumCustomer,LimitCar, LimitCustomer;
 
 
 

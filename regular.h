@@ -7,7 +7,7 @@ Date:
 #ifndef _REGULAR_H_
 #define _REGULAR_H_
 
-#include"customer.cpp"
+#include"customer.h"
 #include<iostream>
 using namespace std;
 
@@ -17,7 +17,7 @@ class Regular : public Customer
 		
 		Regular();
 		Regular(int, string, string, string, int);
-		
+		Regular(const Regular&);
 		~Regular();
 		
 		virtual void print()const;
