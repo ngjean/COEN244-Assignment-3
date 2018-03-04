@@ -16,13 +16,11 @@ class Regular : public Customer
 	public:
 		
 		Regular();
-		Regular(int,string,string,string);
+		Regular(int,int,string,string,string,string);
 		Regular(const Regular&);
 		~Regular();
 
 	private:
-	int privilege = 25;
-	string type ="Regular";
 	
 	
 };

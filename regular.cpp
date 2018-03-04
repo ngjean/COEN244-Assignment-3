@@ -11,7 +11,7 @@ Regular::Regular() : Customer()
 	//does nothing
 }
 
-Regular::Regular(int inum, string sname, string saddress, string stell) : Customer(inum,privilege,sname,saddress,stell,type)
+Regular::Regular(int inum, int ipriv, string sname, string saddress, string stell, string stype) : Customer(inum,ipriv,sname,saddress,stell,stype)
 {
 	//does nothing
 }
