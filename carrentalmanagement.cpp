@@ -140,6 +140,7 @@ void CarRentalManagement::RentCar(int id) // PART E
 					if(carPtr[ifig]->getStatus()) // check if the car is available
 					{
 						customerPtr[inum]->rentedcar(carPtr[ifg]); // rent the car to the customer
+						
 						return;
 					}
 					else

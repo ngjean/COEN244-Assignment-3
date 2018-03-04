@@ -6,36 +6,36 @@ Date:
 
 #ifndef _CUSTOMER_H_
 #define _CUSTOMER_H_
-#include"car.h"
 #include<iostream>
+
+#include"car.h"
 using namespace std;
 
 class Customer
 {
-	
 	public:
 		Customer();
 		Customer(int,string,string,string);
 		Customer(const Customer&);
-		
-		Car *Rented;
-		
-		virtual ~Customer();	
-	
-		virtual void setPrivilege(int); 
-		
+
+		virtual ~Customer();
+
+		virtual void setPrivilege(int);
+
 		virtual int getID();
-		virtual string getType(); 
+		virtual string getType();
 		virtual int getPrivilege();
-		
-		virtual void rentedcar(const Car&);
-		
+
+		void rentedcar(const Customer&);
+
 		virtual void print() const;
 		
-	protected:	
+	protected:
+		Car *Rented;
+
 		int Idnum,privilege;
-		string name,address,tel,type; 
-		
-	
+		string name,address,tel,type;
+		bool brentedcar;
+
 };
 #endif

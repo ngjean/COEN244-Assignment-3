@@ -5,7 +5,6 @@ Date:
 */
 
 #include"customer.h"
-
 Customer::Customer()
 {
 	Idnum = 1;
@@ -14,6 +13,7 @@ Customer::Customer()
 	tel = "(123)654-1234";
 	type = "NONE";
 	privilege = 0;
+	brentedcar = false;
 }
 
 Customer::Customer(int inum, string sname, string saddress, string stel)
@@ -60,19 +60,22 @@ void Customer::print()const
 		<<"Telephone: "<<tel<<endl;
 }
 
-void Customer::rentedcar(const Car &borrow)
+void Customer::rentedcar(const Car& borrow)
 {
 	/*if(borrow.getStatus())
 	{
 		Rented = borrow;
 		borrow.setStatus(false);
+		brentedcar = true;
 	}
 	else
 	{
 		cout<<endl<<"CAR NOT AVAILABLE"<<endl;
 	}*/
+	
 	Rented = borrow;
 	borrow.setStatus(false);
+	brentedcar = true;
 }
 
 Customer::~Customer()
