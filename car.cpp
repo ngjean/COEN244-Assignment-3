@@ -51,7 +51,7 @@ bool Car::getStatus() const
 
 void Car::carBorrow(const Customer& borrow)
 {
-	borrower = borrow;
+	borrower = &borrow;
 }
 
 void Car::print() const
