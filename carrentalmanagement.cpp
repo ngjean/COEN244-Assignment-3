@@ -38,9 +38,9 @@ void CarRentalManagement::RemoveCar(int iNumcar) // PART B
 	{	
 		if(carPtr[inum]->getnum() == iNumcar )
 		{
-			for(int ifig = inum; ifig < NumCar; ifig++)
+			for(int ifig = inum; ifig < NumCar -1; ifig++)
 			{
-			carPtr[ifig] = carPtr[ifig + 1];
+				carPtr[ifig] = carPtr[ifig + 1];
 			}
 			NumCar--;
 			return;
