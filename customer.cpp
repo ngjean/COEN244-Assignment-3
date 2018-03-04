@@ -60,6 +60,21 @@ void Customer::print()const
 		<<"Telephone: "<<tel<<endl;
 }
 
+void Customer::rentedcar(const Car &borrow)
+{
+	/*if(borrow.getStatus())
+	{
+		Rented = borrow;
+		borrow.setStatus(false);
+	}
+	else
+	{
+		cout<<endl<<"CAR NOT AVAILABLE"<<endl;
+	}*/
+	Rented = borrow;
+	borrow.setStatus(false);
+}
+
 Customer::~Customer()
 {
 	

@@ -29,7 +29,7 @@ class Car
 		
 	private:
 		int num;
-		string type;
+		string type; //Standard or Luxury cars
 		bool status; // true = "available" & false = "unavailable"
 };
 #endif

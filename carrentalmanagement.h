@@ -31,12 +31,12 @@ class CarRentalManagement
     void RemoveCar(int);// b)
     void RemoveCustomer(int);// d)
 
-    void RentCar();// e)
+    void RentCar(int);// e)
 
     void UpdateCarInfo();// f)
 
-    int getPriviledge()const;// g)
-    void setPriviledge(int);// h)
+    int getPriviledge(int)const;// g)
+    void setPriviledge(int,string);// h)
 
     bool statusCar(); // i)  //or maybe use a void not sure yet
     bool statusCustomer(); // j) //or maybe use a void not sure yet
@@ -46,8 +46,8 @@ class CarRentalManagement
   
   
   private:
-	Customer *customerPtr;
-	Car carPtr[100];
+	Customer *customerPtr[100];
+	Car *carPtr[100];
 	int regularpriv, coporatedpriv, vippriv;
 	int Numcar, NumCustomer,LimitCar, LimitCustomer;
 

@@ -6,7 +6,7 @@ Date:
 
 #ifndef _CUSTOMER_H_
 #define _CUSTOMER_H_
-
+#include"car.h"
 #include<iostream>
 using namespace std;
 
@@ -18,13 +18,17 @@ class Customer
 		Customer(int,string,string,string);
 		Customer(const Customer&);
 		
+		Car *Rented;
+		
 		virtual ~Customer();	
 	
-		void setPrivilege(int); 
+		virtual void setPrivilege(int); 
 		
-		int getID();
-		string getType(); 
-		int getPrivilege();
+		virtual int getID();
+		virtual string getType(); 
+		virtual int getPrivilege();
+		
+		virtual void rentedcar(const Car&);
 		
 		virtual void print() const;
 		
