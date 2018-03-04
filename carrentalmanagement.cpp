@@ -16,10 +16,6 @@ CarRentalManagement::CarRentalManagement()
 	*/
 	NumCar = 0;
 	NumCustomer= 0;
-	LimitCar = 100;
-	LimitCustomer = 100;
-	carPtr = new carPtr[limitcar]
-	customerPtr = new customerPtr[limitCustomer]
 }
 
 void CarRentalManagement::AddCar(int inum, string stype) // PART A
