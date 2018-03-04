@@ -9,18 +9,22 @@
 #define CORPORATE_H_
 
 #include "customer.h"
-
+#include<iostream>
 class Corporate : public Customer {
-public:
-	Corporate();
-	Corporate(int, string, string, string, string, string, int);
-	Corporate(const Corporate&);
-	void print() const;
-	~Corporate();
-
-private:
-	string nameCompany;
-	string addressCompany;
+	public:
+		
+		Corporate();
+		Corporate(int, string, string, string, string, string);
+		Corporate(const Corporate&);
+		
+		virtual void print() const;
+		
+		~Corporate();
+	
+	protected:
+		
+		string nameCompany;
+		string addressCompany;
 };
 
 #endif /* CORPORATE_H_ */

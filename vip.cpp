@@ -12,19 +12,16 @@ VIP::VIP() : Customer()
 	privilege = 45;
 }
 
-VIP::VIP(int inum, string sname, string saddress, string stell,int iprivilege) : Customer(inum,sname,saddress,stell,iprivilege)
+VIP::VIP(int inum, string sname, string saddress, string stell) : Customer(inum,sname,saddress,stell)
 {
 	type = "VIP";
+	privilege = 45;
 }
 
-VIP::VIP(const VIP& v1) : Customer(v1){
-
-}
-
-void VIP::print()const
+VIP::VIP(const VIP& v1) : Customer(v1)
 {
-	Customer::print();
-	cout<<"Type: "<<type<<endl;
+	type = v1.type;
+	privilege = v1.privilege;
 }
 
 VIP::~VIP()

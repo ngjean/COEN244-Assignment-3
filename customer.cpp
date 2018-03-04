@@ -16,14 +16,12 @@ Customer::Customer()
 	privilege = 0;
 }
 
-Customer::Customer(int inum, int ipriv, string sname, string saddress, string stel, string stype)
+Customer::Customer(int inum, string sname, string saddress, string stel)
 {
 	Idnum = inum;
 	name = sname;
 	address = saddress;
 	tel = stel;
-	type = stype;
-	privilege = ipriv;
 }
 
 Customer::Customer(const Customer &c1)
@@ -32,9 +30,6 @@ Customer::Customer(const Customer &c1)
 	name=c1.name;
 	address=c1.address;
 	tel=c1.tel;
-	type = c1.type;
-	privilege = c1.privilege;
-	
 }
 
 void Customer::setPrivilege(int iprivilege)
@@ -59,7 +54,7 @@ int Customer::getPrivilege()
 void Customer::print()const
 {
 	cout<<"Customer#: "<<Idnum<<endl
-		<<"Type "<<type<<endl
+		<<"Type: "<<type<<endl
 		<<"Name: "<<name<<endl
 		<<"Address: "<<address<<endl
 		<<"Telephone: "<<tel<<endl;

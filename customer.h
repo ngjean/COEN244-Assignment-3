@@ -8,7 +8,6 @@ Date:
 #define _CUSTOMER_H_
 
 #include<iostream>
-#include <string>
 using namespace std;
 
 class Customer
@@ -16,7 +15,7 @@ class Customer
 	
 	public:
 		Customer();
-		Customer(int,int,string,string,string,string);
+		Customer(int,string,string,string);
 		Customer(const Customer&);
 		
 		virtual ~Customer();	
@@ -29,7 +28,7 @@ class Customer
 		
 		virtual void print() const;
 		
-	private:	
+	protected:	
 		int Idnum,privilege;
 		string name,address,tel,type; 
 		

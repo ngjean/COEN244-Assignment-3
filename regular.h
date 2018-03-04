@@ -16,11 +16,9 @@ class Regular : public Customer
 	public:
 		
 		Regular();
-		Regular(int,int,string,string,string,string);
+		Regular(int,string,string,string);
 		Regular(const Regular&);
 		~Regular();
-
-	private:
 	
 	
 };

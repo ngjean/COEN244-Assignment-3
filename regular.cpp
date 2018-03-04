@@ -11,14 +11,16 @@ Regular::Regular() : Customer()
 	//does nothing
 }
 
-Regular::Regular(int inum, int ipriv, string sname, string saddress, string stell, string stype) : Customer(inum,ipriv,sname,saddress,stell,stype)
+Regular::Regular(int inum, string sname, string saddress, string stell) : Customer(inum,sname,saddress,stell)
 {
-	//does nothing
+	privilege = 20;
+	type = "Regular";
 }
 
 Regular::Regular(const Regular& r1):Customer(r1)
 {
-	//does nothing
+	prvilege = r1.privilege;
+	type = r1.type;
 }
 
 Regular::~Regular()
