@@ -8,7 +8,7 @@
 #ifndef CORPORATE_H_
 #define CORPORATE_H_
 
-#include "customer.cpp"
+#include "customer.h"
 
 class Corporate : public Customer {
 public:
