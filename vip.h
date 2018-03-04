@@ -23,9 +23,6 @@ class VIP : public Customer
 		virtual void print()const;
 		
 	private:
-	string type;
-	int privilege;
-	
 	
 	
 };
