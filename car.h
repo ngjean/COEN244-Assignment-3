@@ -25,7 +25,7 @@ class Car
 		void setStatus(bool);
 		bool getStatus() const;
 		
-		void carBorrower(const Customer&);
+		void carBorrow(const Customer&);
 		
 		virtual void print() const;
 		

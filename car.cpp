@@ -11,6 +11,7 @@ Car::Car() // default constroctor
 	num = 100;
 	type = "UNKNOWN";
 	status = true;
+	borrower = new Customer();
 }
 
 Car::Car(int inum, string stype)
@@ -18,6 +19,7 @@ Car::Car(int inum, string stype)
 	num = inum;
 	type = stype;
 	status = true;
+	borrower = new Customer();
 }
 
 Car::Car(const Car& anotherCar)
