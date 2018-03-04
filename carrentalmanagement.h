@@ -49,7 +49,7 @@ class CarRentalManagement
 	Customer *customerPtr;
 	Car *carPtr;
 	int regularpriv, coporatedpriv, vippriv;
-	int Numcar, NumCustomer,LimitCar, LimitCustomer;
+	int NumCar, NumCustomer,LimitCar, LimitCustomer;
 
 
 
