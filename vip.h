@@ -7,7 +7,7 @@ Date:
 #ifndef _VIP_H_
 #define _VIP_H_
 
-#include"customer.cpp"
+#include"customer.h"
 
 using namespace std;
 
