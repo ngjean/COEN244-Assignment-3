@@ -14,6 +14,7 @@ Customer::Customer()
 	type = "NONE";
 	privilege = 0;
 	brentedcar = false;
+	Rented = new Car();
 }
 
 Customer::Customer(int inum, string sname, string saddress, string stel)
@@ -22,6 +23,7 @@ Customer::Customer(int inum, string sname, string saddress, string stel)
 	name = sname;
 	address = saddress;
 	tel = stel;
+	Rented = new Car();
 }
 
 Customer::Customer(const Customer &c1)
@@ -30,6 +32,7 @@ Customer::Customer(const Customer &c1)
 	name=c1.name;
 	address=c1.address;
 	tel=c1.tel;
+	Rented = new Car();
 }
 
 void Customer::setPrivilege(int iprivilege)
