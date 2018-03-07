@@ -46,10 +46,10 @@ class CarRentalManagement
   
   
   private:
-	Customer *customerPtr;
-	Car *carPtr;
+	Customer *customerPtr[100];
+	Car *carPtr[100];
 	int regularpriv, coporatedpriv, vippriv;
-	int NumCar, NumCustomer,LimitCar, LimitCustomer;
+	int NumCar, NumCustomer,LimitCar(100), LimitCustomer(100);
 
 
 

@@ -19,7 +19,7 @@ Regular::Regular(int inum, string sname, string saddress, string stell) : Custom
 
 Regular::Regular(const Regular& r1):Customer(r1)
 {
-	prvilege = r1.privilege;
+	privilege = r1.privilege;
 	type = r1.type;
 }
 

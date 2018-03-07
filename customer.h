@@ -26,7 +26,7 @@ class Customer
 		virtual string getType();
 		virtual int getPrivilege();
 
-		void rentedcar(const Customer&);
+		void rentedcar(Car&);
 
 		virtual void print() const;
 		

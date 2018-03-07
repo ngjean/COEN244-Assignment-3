@@ -16,8 +16,6 @@ CarRentalManagement::CarRentalManagement()
 	*/
 	NumCar = 0;
 	NumCustomer= 0;
-	LimitCar = 100;
-	LimitCustomer = 100;
 }
 
 void CarRentalManagement::AddCar(int inum, string stype) // PART A
@@ -40,9 +38,9 @@ void CarRentalManagement::RemoveCar(int iNumcar) // PART B
 	{	
 		if(carPtr[inum]->getnum() == iNumcar )
 		{
-			for(int ifig = inum; ifig < NumCar; ifig++)
+			for(int ifig = inum; ifig < NumCar -1; ifig++)
 			{
-			carPtr[ifig] = carPtr[ifig + 1];
+				carPtr[ifig] = carPtr[ifig + 1];
 			}
 			NumCar--;
 			return;
