@@ -9,7 +9,6 @@ ID: 40065184
 #define _CARRENTALMANAGEMENT_H_
 
 #include"car.h"
-#include"customer.h"
 #include"corporate.h"
 #include"vip.h"
 #include"regular.h"
