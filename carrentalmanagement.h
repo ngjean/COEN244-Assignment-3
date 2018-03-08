@@ -35,7 +35,7 @@ class CarRentalManagement
 
     void RentCar(int);//part  e)
 
-    void UpdateCarInfo(int,int);// part f)
+    void UpdateCarInfo(int);// part f)
 
     int getPriviledge(int)const;// part g)
     void setPriviledge(int,string);// part h)

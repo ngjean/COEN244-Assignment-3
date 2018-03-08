@@ -117,22 +117,24 @@ void CarRentalManagement::RentCar(int id) // PART E
 	}
 }
 
-void CarRentalManagement::UpdateCarInfo(int icarid, int icustid) // PART F
+void CarRentalManagement::UpdateCarInfo(int icarid) // PART F
 {
-	for(int inum = 0 ;inum < NumCustomer; inum++) // check for all the customer in database
-	{
-		if(customerPtr[inum]->getID() == icustid) // search by id
-		{
-			customerPtr[inum]->RentedCar(0,false); // set customer info to 0 and false which mean customer not renting a car therefore id car is zero which doesnt exist
-		}
-	}
-
+	int itemp(0);
 	for(int ifig = 0; ifig< NumCar;ifig++) // check for all the car in inventory
 	{
 		if( (carPtr[ifig]->getnum()) == icarid) // search by id
 		{
+			itemp = carPtr[ifig]->getBorrower();//save borrower id
 			carPtr[ifig]->setStatus(true); // set status to true which mean no rented
 			carPtr[ifig]->setBorrower(0); // set Idborrower to 0 which mean no one is renting it
+		}
+	}
+	
+	for(int inum = 0 ;inum < NumCustomer; inum++) // check for all the customer in database
+	{
+		if(customerPtr[inum]->getID() == itemp) // search by id
+		{
+			customerPtr[inum]->RentedCar(0,false); // set customer info to 0 and false which mean customer not renting a car therefore id car is zero which doesnt exist
 		}
 	}
 }
