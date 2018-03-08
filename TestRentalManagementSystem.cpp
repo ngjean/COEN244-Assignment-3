@@ -31,6 +31,7 @@ int main()
 	
 	
 	
+	
 	CarRentalManagement *m1;
 	m1 = new CarRentalManagement();
 	for (int i = 0 ; i < 10 ; i++){
@@ -39,7 +40,7 @@ int main()
 
 	}
 
-	for (int i = 10 ; i < 20 ; i++){
+	for (int i = 0 ; i < 10 ; i++){
 
 		m1->AddCar(i+1,"Standard");
 
@@ -55,12 +56,23 @@ int main()
 	m1->RentCar(1);
 	m1->RentCar(2);
 	m1->getPriviledge(1);
-	cout << "The customer #2 is of the type: " << m1->getCustomerType(2) << endl;
-	cout << "The car #3 of the list is of the type: "<< m1->statusCar(3) << endl;
-	cout << "The customer #1 is of the type: " << m1->statusCustomer(1) << "and it is allowed to rent a car for: " << m1->getPriviledge(1) << "days."
-			<< endl;
 
+	m1->getCustomerType(2);
+
+	m1->getCarType("FedEx");
+
+	m1->getCustomerType(1);
 	
+	cout << " and it is allowed to borrow it for: " << m1->getPriviledge(1) << "days." << endl;
+	
+	cout << "Let us try with a Car that is not in the stock, car #30"<< endl;
+	
+	m1->RemoveCar(30);
+	
+	m1->RemoveCar(4);
+	m1->RemoveCustomer(2);
+
+
 	
 	
 	return 0;
