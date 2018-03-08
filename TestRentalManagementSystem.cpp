@@ -14,22 +14,7 @@ using namespace std;
 
 int main()
 {
-	
-	Customer *test1;
-	Regular *test2;
-	test1 = new Customer();
-	test2 = new Regular(123,"john","123rue","1235462135");
 
-	test1->print();
-	test2->print();
-
-	test1 = test2;
-
-	test1->print();
-	
-	
-	
-	
 	
 	CarRentalManagement *m1;
 	m1 = new CarRentalManagement();
@@ -39,7 +24,7 @@ int main()
 
 	}
 
-	for (int i = 0 ; i < 10 ; i++){
+	for (int i = 10 ; i < 20 ; i++){
 
 		m1->AddCar(i+1,"Standard");
 
@@ -54,24 +39,28 @@ int main()
 	m1->RentCar(3);
 	m1->RentCar(1);
 	m1->RentCar(2);
-	m1->getPriviledge(1);
-
+	m1->getPriviledge(5);//which do not exist as of right now
+	
 	m1->getCustomerType(2);
 
-	m1->getCarType("FedEx");
-
+	m1->getCarType("FedEx");// there is a corporated customer of that company
+	m1->getCarType("canada post");//there isnt any corporated customer of that company
+	
 	m1->getCustomerType(1);
 	
 	cout << " and it is allowed to borrow it for: " << m1->getPriviledge(1) << "days." << endl;
 	
 	cout << "Let us try with a Car that is not in the stock, car #30"<< endl;
-	
 	m1->RemoveCar(30);
 	
 	m1->RemoveCar(4);
 	m1->RemoveCustomer(2);
 
+	for (int i = 20 ; i < 101 ; i++){ // causing error since max number of car is set to 100
 
+		m1->AddCar(i+1,"Standard");
+
+	}
 	
 	
 	return 0;
