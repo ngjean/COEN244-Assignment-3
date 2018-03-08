@@ -21,13 +21,11 @@ int main()
 	for (int i = 0 ; i < 10 ; i++){
 
 		m1->AddCar(i+1,"Luxury");
-
 	}
 
 	for (int i = 10 ; i < 20 ; i++){
 
 		m1->AddCar(i+1,"Standard");
-
 	}
 
 
@@ -40,6 +38,9 @@ int main()
 	m1->RentCar(1);
 	m1->RentCar(2);
 	m1->getPriviledge(5);//which do not exist as of right now
+	cout<<"The privilege of Customer with ID: 1 is "<<m1->getPriviledge(1);
+	m1->setPriviledge(40,"Corporate");//change priviledge of all the customer of type Corporate to 40
+	cout<<"The privilege of Customer with ID: 1 is "<<m1->getPriviledge(1);
 	
 	m1->getCustomerType(2);
 
