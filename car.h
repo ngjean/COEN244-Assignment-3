@@ -1,7 +1,8 @@
 /*
-Programmer:NGJEAN
-Program:
-Date:
+Programmer:Jean Carlos Ng
+ID: 40026914
+ProgrammerGabriel Arturo Giordan
+ID: 40065184
 */
 
 #ifndef _CAR_H_

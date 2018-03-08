@@ -1,3 +1,10 @@
+/*
+Programmer:Jean Carlos Ng
+ID: 40026914
+ProgrammerGabriel Arturo Giordan
+ID: 40065184
+*/
+
 #ifndef _CARRENTALMANAGEMENT_H_
 #define _CARRENTALMANAGEMENT_H_
 

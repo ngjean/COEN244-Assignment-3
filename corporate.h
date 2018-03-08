@@ -1,9 +1,9 @@
 /*
- * Corporate.h
- *
- *  Created on: Feb 23, 2018
- *      Author: usuario
- */
+Programmer:Jean Carlos Ng
+ID: 40026914
+ProgrammerGabriel Arturo Giordan
+ID: 40065184
+*/
 
 #ifndef CORPORATE_H_
 #define CORPORATE_H_
