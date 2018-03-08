@@ -7,9 +7,8 @@ Course COEN 244
 Assignment #3
 */
 #include <iostream>
-#include"customer.cpp"
-//#incluegular.h"
-#include"regular.h"
+
+#include"carrentalmanagement.h"
 
 using namespace std;
 
