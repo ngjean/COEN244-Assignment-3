@@ -1,7 +1,7 @@
 /*
 Programmer:Jean Carlos Ng
 ID: 40026914
-ProgrammerGabriel Arturo Giordan
+Programmer: Gabriel Arturo Giordano
 ID: 40065184
 */
 
