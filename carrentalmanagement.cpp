@@ -279,3 +279,8 @@ void CarRentalManagement::getCarType(string snameCo)
 	}
 }
 
+CarRentalManagement::~CarRentalManagement()
+{
+	
+}
+
