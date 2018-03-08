@@ -42,6 +42,7 @@ void CarRentalManagement::RemoveCar(int iNumcar) // PART B
 				carPtr[ifig] = carPtr[ifig + 1]; //move 
 			}
 			NumCar--; // NumCar - 1
+			cout<<"Car with ID: "<<iNumcar<<" have been removed."<<endl;
 			return; // return once done
 		}
 	}
@@ -76,6 +77,7 @@ void CarRentalManagement::RemoveCustomer(int numID){ // PART D
 				customerPtr[j] = customerPtr[j+1]; // move object in the next index down
 			}
 			NumCustomer--; // NumCustomer - 1
+			cout<<"Customer with ID: "<<numID<<" have been removed."<<endl;
 			return;
 		}
 	}
@@ -127,6 +129,7 @@ void CarRentalManagement::UpdateCarInfo(int icarid) // PART F
 			itemp = carPtr[ifig]->getBorrower();//save borrower id
 			carPtr[ifig]->setStatus(true); // set status to true which mean no rented
 			carPtr[ifig]->setBorrower(0); // set Idborrower to 0 which mean no one is renting it
+			cout<<"Car with ID: "<<icarid<<" have been return."<<endl;
 		}
 	}
 	
@@ -135,6 +138,7 @@ void CarRentalManagement::UpdateCarInfo(int icarid) // PART F
 		if(customerPtr[inum]->getID() == itemp) // search by id
 		{
 			customerPtr[inum]->RentedCar(0,false); // set customer info to 0 and false which mean customer not renting a car therefore id car is zero which doesnt exist
+			cout<<"Customer with ID: "<<customerPtr[inum]->getID()<<" is no longer renting a car."<<endl;
 		}
 	}
 }
@@ -163,6 +167,7 @@ void CarRentalManagement::setPriviledge(int ipriv, string stype) // PART H
 			customerPtr[inum]->setPrivilege(ipriv); // set all the custoemr of stype with ipriv as a privilege
 		}
 	}
+	cout<<"Privilege of Customer type "<<stype<<" have been change to "<<ipriv<<endl;
 }
 
 bool CarRentalManagement::statusCar(int icarid) // PART I
