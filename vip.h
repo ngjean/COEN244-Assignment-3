@@ -11,14 +11,14 @@ Date:
 #include<iostream>
 using namespace std;
 
-class VIP : public Customer
+class VIP : public Customer// inherit funtion/data member from customer
 {
 	public:
 		
-		VIP();
-		VIP(int, string, string, string);
-		VIP(const VIP&);
-		~VIP();
+		VIP();//default constructor
+		VIP(int, string, string, string);//constructor with argument
+		VIP(const VIP&);//copy constructor
+		~VIP();//destructor
 		
 	private:
 	
