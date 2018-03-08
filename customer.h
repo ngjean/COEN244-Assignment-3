@@ -13,24 +13,24 @@ using namespace std;
 class Customer
 {
 	public:
-		Customer();
-		Customer(int,string,string,string);
-		Customer(const Customer&);
+		Customer();  // default constructor
+		Customer(int,string,string,string);// constructor with argument
+		Customer(const Customer&); // copy constructor
 
-		virtual ~Customer();
+		virtual ~Customer(); // destructor
 
-		virtual void setPrivilege(int);
+		virtual void setPrivilege(int); //set privilege a variable
 
-		virtual int getID();
-		virtual int getRentedID();
-		virtual string getType();
-		virtual int getPrivilege();
-		virtual bool getRentStatus();
-		virtual string getName();
+		virtual int getID(); //return Idnum
+		virtual int getRentedID(); // return Idcar
+		virtual string getType(); // return type
+		virtual int getPrivilege(); //retun privilege
+		virtual bool getRentStatus(); //return brentedcar
+		virtual string getName(); //return name
 
-		virtual void RentedCar(int,bool);
+		virtual void RentedCar(int,bool); // chekc brentedcar and Id car
 
-		virtual void print() const;
+		virtual void print() const; // print customer info
 		
 	protected:
 		int Idnum,privilege,IdCar; //IdCar = 0 when a car is not being rented; Idnum > 0 always
