@@ -44,6 +44,8 @@ class CarRentalManagement
 
     void getCustomerType(int); // part k)
     void getCarType(string); //part  l)
+	
+    virtual void print() const;//print customer and car info
   
   
   private:
