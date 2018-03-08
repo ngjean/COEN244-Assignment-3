@@ -11,14 +11,14 @@ Date:
 #include<iostream>
 using namespace std;
 
-class Regular : public Customer
+class Regular : public Customer // inherit funtion/data member from customer
 {
 	public:
 		
-		Regular();
-		Regular(int,string,string,string);
-		Regular(const Regular&);
-		~Regular();
+		Regular();//default constructor
+		Regular(int,string,string,string);//constructor with argument
+		Regular(const Regular&);//copy constructor
+		~Regular();//destructor
 	
 	
 };
