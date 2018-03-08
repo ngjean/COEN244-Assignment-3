@@ -7,8 +7,6 @@
 #include"vip.h"
 #include"regular.h"
 
-//concern about mutiple include of the same class like customer since it is already include in vip,regular,coporate
-
 #include<iostream>
 
 using namespace std;
@@ -18,39 +16,35 @@ class CarRentalManagement
 
   public:
   
-    CarRentalManagement();//default
-    //CarRentalManagement();
+    CarRentalManagement();//default constructor
 
-    ~CarRentalManagement();
+    ~CarRentalManagement(); // destructor
 
-    void AddCar(int,string);// a)
-    void AddCustomer(int,string,string,string,string,string,string); // c)
-   // void AddCustomer( Regular&); // c.1)
-    //void AddCustomer(const Corporate&);  //c.2)
-    //void AddCustomer(const VIP&);  //c.3)
-	
-    void RemoveCar(int);// b)
-    void RemoveCustomer(int);// d)
+    void AddCar(int,string);// part a)
+    void AddCustomer(int,string,string,string,string,string,string); // part c)
 
-    void RentCar(int);// e)
+    void RemoveCar(int);// part b)
+    void RemoveCustomer(int);// part d)
 
-    void UpdateCarInfo(int,int);// f)
+    void RentCar(int);//part  e)
 
-    int getPriviledge(int)const;// g)
-    void setPriviledge(int,string);// h)
+    void UpdateCarInfo(int,int);// part f)
 
-    bool statusCar(int); // i)  //or maybe use a void not sure yet
-    bool statusCustomer(int); // j) //or maybe use a void not sure yet
+    int getPriviledge(int)const;// part g)
+    void setPriviledge(int,string);// part h)
 
-    void getCustomerType(int); // k)
-    void getCarType(string); // l)
+    bool statusCar(int); // part i)  //or maybe use a void not sure yet
+    bool statusCustomer(int); //part  j) //or maybe use a void not sure yet
+
+    void getCustomerType(int); // part k)
+    void getCarType(string); //part  l)
   
   
   private:
-	Customer *customerPtr[100];
-	Car *carPtr[100];
-	int regularpriv, coporatedpriv, vippriv;
-	int NumCar, NumCustomer,LimitCar, LimitCustomer;
+	Customer *customerPtr[100]; // set max limit of a arry of cutomer pointer
+	Car *carPtr[100];// set max limit of a arry of car pointer
+	int regularpriv, coporatedpriv, vippriv; // variable declaration
+	int NumCar, NumCustomer,LimitCar, LimitCustomer;// variable declaration
 
 
 
