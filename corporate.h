@@ -10,23 +10,24 @@
 
 #include "customer.h"
 #include<iostream>
+
 class Corporate : public Customer {
 	public:
 		
-		Corporate();
-		Corporate(int, string, string, string, string, string);
-		Corporate(const Corporate&);
+		Corporate(); //default constructor
+		Corporate(int, string, string, string, string, string); // constructor with argument
+		Corporate(const Corporate&); // copy constructor
 
-		virtual string getName();
+		virtual string getName(); //overide getName
 		
-		virtual void print() const;
+		virtual void print() const; //override print
 		
-		~Corporate();
+		~Corporate(); //destructor
 	
 	protected:
 		
-		string nameCompany;
-		string addressCompany;
+		string nameCompany; //declaration variable 
+		string addressCompany; //declaration variable 
 };
 
 #endif /* CORPORATE_H_ */
