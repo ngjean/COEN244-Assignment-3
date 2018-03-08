@@ -243,6 +243,23 @@ void CarRentalManagement::getCarType(string snameCo)
 	}
 }
 
+void CarRentalManagement::print()const
+{
+	//print all the car info store in database
+	cout<<endl<<"List of Car in database"<<endl;
+	for(int ifig = 0; ifig < NumCar; ifig++)
+	{
+		carPtr[ifig]->print();
+	}
+	
+	//print all the customer info in database
+	cout<<endl<<"List of the customer in database"<<endl;
+	for(int inum = 0;  inum < NumCustomer; inum++)
+	{
+		customerPtr[inum]->print();
+	}
+}
+
 CarRentalManagement::~CarRentalManagement()
 {
 	
