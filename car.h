@@ -14,22 +14,22 @@ class Car
 {
 
 	public:
-		Car();
-		Car(int,string);	
-		Car(const Car&);
+		Car(); // default constructor
+		Car(int,string); // constructor with argument
+		Car(const Car&); // copy constructor
 		
-		int getnum();
-		int getBorrower();
-		string getype();
+		int getnum(); // return num(a varriable)
+		int getBorrower(); // return Idborrower (a varriable)
+		string getype();//return type (a varriable)
 		
-		void setStatus(bool);
-		bool getStatus() const;
+		void setStatus(bool); // change status (a varriable)
+		bool getStatus() const;// return status (a varriable)
 		
-		void setBorrower(int);
+		void setBorrower(int); // set Idborrower with given int
 		
-		virtual void print() const;
+		virtual void print() const; // print car info
 		
-		virtual ~Car();
+		virtual ~Car(); // destructor
 		
 	private:
 		int num, Idborrower; // Idborrower = 0 when it isnt rented; num > 0 always.
