@@ -11,7 +11,7 @@
 #include "customer.h"
 #include<iostream>
 
-class Corporate : public Customer {
+class Corporate : public Customer {// inherit funtion/data member from customer
 	public:
 		
 		Corporate(); //default constructor
