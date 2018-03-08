@@ -39,6 +39,10 @@ void Corporate::print()const
 	cout << "Address of the Company: " << addressCompany << endl;
 }
 
+string Corporate::getName()
+{
+	return nameCompany;
+}
 
 Corporate::~Corporate()
 {

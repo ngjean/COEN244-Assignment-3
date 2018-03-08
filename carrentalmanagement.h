@@ -1,11 +1,11 @@
 #ifndef _CARRENTALMANAGEMENT_H_
 #define _CARRENTALMANAGEMENT_H_
 
-#include"car.cpp"
-#include"customer.cpp"
-#include"corporate.cpp"
-#include"vip.cpp"
-#include"regular.cpp"
+#include"car.h"
+#include"customer.h"
+#include"corporate.h"
+#include"vip.h"
+#include"regular.h"
 
 //concern about mutiple include of the same class like customer since it is already include in vip,regular,coporate
 
@@ -24,24 +24,25 @@ class CarRentalManagement
     ~CarRentalManagement();
 
     void AddCar(int,string);// a)
-    void AddCustomer(const Regular&); // c.1)
-    void AddCustomer(const Corporate&);  //c.2)
-    void AddCustomer(const VIP&);  //c.3)
+    void AddCustomer(int,string,string,string,string,string,string); // c)
+   // void AddCustomer( Regular&); // c.1)
+    //void AddCustomer(const Corporate&);  //c.2)
+    //void AddCustomer(const VIP&);  //c.3)
 	
     void RemoveCar(int);// b)
     void RemoveCustomer(int);// d)
 
     void RentCar(int);// e)
 
-    void UpdateCarInfo();// f)
+    void UpdateCarInfo(int,int);// f)
 
     int getPriviledge(int)const;// g)
     void setPriviledge(int,string);// h)
 
-    bool statusCar(); // i)  //or maybe use a void not sure yet
-    bool statusCustomer(); // j) //or maybe use a void not sure yet
+    bool statusCar(int); // i)  //or maybe use a void not sure yet
+    bool statusCustomer(int); // j) //or maybe use a void not sure yet
 
-    void getCustomerType(string); // k)
+    void getCustomerType(int); // k)
     void getCarType(string); // l)
   
   
@@ -49,7 +50,7 @@ class CarRentalManagement
 	Customer *customerPtr[100];
 	Car *carPtr[100];
 	int regularpriv, coporatedpriv, vippriv;
-	int NumCar, NumCustomer,LimitCar(100), LimitCustomer(100);
+	int NumCar, NumCustomer,LimitCar, LimitCustomer;
 
 
 

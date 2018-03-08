@@ -14,7 +14,6 @@ Customer::Customer()
 	type = "NONE";
 	privilege = 0;
 	brentedcar = false;
-	Rented = new Car();
 }
 
 Customer::Customer(int inum, string sname, string saddress, string stel)
@@ -23,7 +22,6 @@ Customer::Customer(int inum, string sname, string saddress, string stel)
 	name = sname;
 	address = saddress;
 	tel = stel;
-	Rented = new Car();
 }
 
 Customer::Customer(const Customer &c1)
@@ -32,7 +30,6 @@ Customer::Customer(const Customer &c1)
 	name=c1.name;
 	address=c1.address;
 	tel=c1.tel;
-	Rented = new Car();
 }
 
 void Customer::setPrivilege(int iprivilege)
@@ -63,22 +60,26 @@ void Customer::print()const
 		<<"Telephone: "<<tel<<endl;
 }
 
-void Customer::rentedcar(Car& borrow)
+bool Customer::getRentStatus()
 {
-	/*if(borrow.getStatus())
-	{
-		Rented = borrow;
-		borrow.setStatus(false);
-		brentedcar = true;
-	}
-	else
-	{
-		cout<<endl<<"CAR NOT AVAILABLE"<<endl;
-	}*/
-	
-	Rented = &borrow;
-	borrow.setStatus(false);
-	brentedcar = true;
+	return brentedcar;
+}
+
+
+void Customer::RentedCar(int id, bool brent)
+{
+	IdCar = id;
+	brentedcar = brent;
+}
+
+int Customer::getRentedID()
+{
+	return IdCar;
+}
+
+string Customer::getName()
+{
+	return name;
 }
 
 Customer::~Customer()

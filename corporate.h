@@ -16,6 +16,8 @@ class Corporate : public Customer {
 		Corporate();
 		Corporate(int, string, string, string, string, string);
 		Corporate(const Corporate&);
+
+		virtual string getName();
 		
 		virtual void print() const;
 		

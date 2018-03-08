@@ -8,7 +8,6 @@ Date:
 #define _CUSTOMER_H_
 #include<iostream>
 
-#include"car.h"
 using namespace std;
 
 class Customer
@@ -23,19 +22,20 @@ class Customer
 		virtual void setPrivilege(int);
 
 		virtual int getID();
+		virtual int getRentedID();
 		virtual string getType();
 		virtual int getPrivilege();
+		virtual bool getRentStatus();
+		virtual string getName();
 
-		void rentedcar(Car&);
+		virtual void RentedCar(int,bool);
 
 		virtual void print() const;
 		
 	protected:
-		Car *Rented;
-
-		int Idnum,privilege;
+		int Idnum,privilege,IdCar; //IdCar = 0 when a car is not being rented; Idnum > 0 always
 		string name,address,tel,type;
-		bool brentedcar;
+		bool brentedcar; // true = renting a car & false = not renting a car
 
 };
 #endif

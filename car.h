@@ -7,7 +7,6 @@ Date:
 #ifndef _CAR_H_
 #define _CAR_H_
 
-#include"customer.h"
 #include<iostream>
 using namespace std;
 
@@ -20,20 +19,20 @@ class Car
 		Car(const Car&);
 		
 		int getnum();
+		int getBorrower();
 		string getype();
 		
 		void setStatus(bool);
 		bool getStatus() const;
 		
-		void carBorrow(const Customer&);
+		void setBorrower(int);
 		
 		virtual void print() const;
 		
 		virtual ~Car();
 		
 	private:
-		Customer *borrower;
-		int num;
+		int num, Idborrower; // Idborrower = 0 when it isnt rented; num > 0 always.
 		string type; //Standard or Luxury cars
 		bool status; // true = "available" & false = "unavailable"
 };
